@@ -1,6 +1,31 @@
-.box{
-    margin-left: 150px;
-    margin-right: 150px;
-    display:flex;
-    justify-content:space-between;
+.header-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 24px;
+    font-weight: bold;
+    color: grey; 
+    
+}
+
+.logo-span{
+    color: #000;
+}
+ 
+
+.currency{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 15px;
+    font-weight: bold;
 }

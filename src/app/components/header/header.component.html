@@ -1,8 +1,18 @@
-<div class="box">
-    <h1>Fast Change</h1>
-    <div>
-        <p>EUR : 36 UAH</p>
-        <p>USD : 35 UAH</p>
-    </div>
-</div>
+<div class="header-box">
+  <div class="logo-box">
+    <fa-icon
+      [style]="{ 'font-size': '30px', color: 'grey' }"
+      [icon]="bank"
+    ></fa-icon>
+    <p class="logo-text"><span class="logo-span">Fast</span> Change</p>
+  </div>
 
+  <div *ngIf="currencies">
+    <p class="currency" *ngIf="currencies['USD'] && currencies['EUR'] && currencies['UAH']">
+      EUR: {{ ((currencies["USD"] / currencies["EUR"]) * currencies["UAH"]).toFixed(2) }} UAH
+    </p>
+    <p class="currency" *ngIf="currencies['UAH']">
+      USD: {{ currencies["UAH"].toFixed(2) }} UAH
+    </p>
+  </div>
+</div>
